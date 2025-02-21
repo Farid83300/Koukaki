@@ -1,2 +1,54 @@
 /* SCSS du Thème enfant */
 
+/* Fade in des sections au chargement de la page */
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+@keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* Keyframe pour contre-carré le fade in down de la bannière */
+@keyframes fadeInUpLogo {
+    from {
+      opacity: 0;
+      transform: translateY(200px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+  .fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .fade-in-down {
+    animation: fadeInDown 1s ease-out forwards;
+  }
+
+  .fade-in-up-logo {
+    animation: fadeInUpLogo 1s ease-out forwards;
+  }
+
+
+  
