@@ -12,13 +12,15 @@
 ?>
 
 	<footer id="colophon" class="site-footer fade-in-up">
-        <ul>
+        <ul class="fade-in-up">
             <li><a href="#">Mentions Légales</a></li>
             <li><a href="#">STUDIO KOUKAKI</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+<script src="http://koukaki.local/wp-content/themes/foce-child/scripts/main.js?ver=1.1"></script>
+<script src="http://koukaki.local/wp-content/themes/foce-child/scripts/slider.js"></script>
 
 <?php wp_footer(); ?>
 

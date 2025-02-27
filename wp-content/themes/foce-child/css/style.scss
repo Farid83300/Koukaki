@@ -1,11 +1,10 @@
 /* SCSS du Thème enfant */
 
 /* Fade in des sections au chargement de la page */
-
 @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(100px);
+      transform: translateY(200px);
     }
     to {
       opacity: 1;
@@ -16,7 +15,7 @@
 @keyframes fadeInDown {
     from {
       opacity: 0;
-      transform: translateY(-100px);
+      transform: translateY(-200px);
     }
     to {
       opacity: 1;
@@ -28,14 +27,13 @@
 @keyframes fadeInUpLogo {
     from {
       opacity: 0;
-      transform: translateY(200px);
+      transform: translateY(400px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-
 
 
   .fade-in-up {
@@ -48,7 +46,93 @@
 
   .fade-in-up-logo {
     animation: fadeInUpLogo 1s ease-out forwards;
+    // CSS pour l'incrustation dans le vidéo de la bannière
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 200px; // Ajustez selon la taille souhaitée
+    height: auto;
+    z-index: 10;
+  }
+
+  
+// Apparition des titre au Scroll
+
+
+
+// Section nomination
+#nomination {
+  display: flex;
+  margin-top: 100px;
+  margin-left: 200px;
+
+    overflow: hidden;
+    background-image: url("./images/bg_nomination.png");
+    &::before {
+      content: url("./images/Sunflower.png");
+      position: absolute;
+      left: -1em;
+      top: 0;
+
+    }
+    &::after {
+      content: url("./images/orchid.png");
+      position: absolute;
+      right: 1em;
+      top: 1.2em;
+
+    }
   }
 
 
-  
+
+// Section personnages
+#characters {
+  display: flex;
+  flex-direction: column;
+  h3 {
+    margin-right: 700px;
+  }
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+// Bannière vidéo
+
+.banner {
+  display: flex;
+  position: relative;
+  background-image: none;
+  min-height: 806px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
