@@ -49,6 +49,16 @@
   z-index: 10;
 }
 
+.section-title {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.section-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 #nomination {
   display: flex;
   margin-top: 100px;
@@ -72,22 +82,19 @@
 #characters {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 #characters h3 {
   margin-right: 700px;
 }
 
 .swiper {
-  width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
 .swiper-slide {
-  background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 300px;
 }
 
 .swiper-slide img {
@@ -96,6 +103,7 @@
 }
 
 .banner {
+  background-image: url("./assets/images/banner.png");
   display: flex;
   position: relative;
   background-image: none;
@@ -104,6 +112,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.banner img {
+  margin-top: -10%;
+  width: 50%;
 }
 
 .banner-video {
