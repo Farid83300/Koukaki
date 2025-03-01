@@ -4,7 +4,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <article id="characters">
-    <h3 class="section-title">Les personnages</h3>
+    <h3><span>Les personnages</span></h3>
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">

@@ -56,73 +56,47 @@
 
   
 // Apparition des titre au Scroll
-.section-title {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    
-    &.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Assurer que h2 et h3 sont positionnés correctement */
+h2, h3 {
+  position: relative;
 }
 
-
-// Section nomination
-#nomination {
-  display: flex;
-  margin-top: 100px;
-  margin-left: 200px;
-
-    overflow: hidden;
-    background-image: url("./images/bg_nomination.png");
-    &::before {
-      content: url("./images/Sunflower.png");
-      position: absolute;
-      left: -1em;
-      top: 0;
-
-    }
-    &::after {
-      content: url("./images/orchid.png");
-      position: absolute;
-      right: 1em;
-      top: 1.2em;
-
-    }
-  }
-
-
-
-// Section personnages
-#characters {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  h3 {
-    margin-right: 700px;
-  }
-}
-
-
-.swiper {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.swiper-slide {
-  background-size: cover;
-}
-
-.swiper-slide img {
+/* Restaurer les before/after */
+h2::before, h2::after,
+h3::before, h3::after {
+  content: "";
+  position: absolute;
   display: block;
-  width: 100%;
+  opacity: 1; /* S’assurer qu’ils restent visibles */
+  transition: none !important; /* Aucune animation sur eux */
 }
+
+/* Effet uniquement sur le texte du titre */
+h2 span, h3 span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Masquer au chargement */
+h2.not-visible span, h3.not-visible span {
+  opacity: 0 !important;
+  transform: translateY(30px) !important;
+}
+
+/* Effet de fade-in up */
+h2.fade-in-visible span, h3.fade-in-visible span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
 
 // Bannière vidéo
-
 .banner {
-  background-image: url("./assets/images/banner.png");
+  background-image: url("/wp-content/themes/foce-child/images/banner.png");
   display: flex;
   position: relative;
   background-image: none;
@@ -147,4 +121,176 @@
   top: 0;
   bottom: 0;
   z-index: -1;
+}
+
+// Section Histoire
+.story {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2{
+    &::before {
+      content: url('/wp-content/themes/foce-child/images/sunflower_leaves.png');
+      position: absolute;
+      display: block;
+      left: -443px;
+      top: 1.8em;
+    }
+    &::after {
+      content: url('/wp-content/themes/foce-child/images/Sunflower.png');
+      position: absolute;
+      display: block;
+      left: -400px;
+      top: 6em;
+      z-index: 5;
+    }
+  }
+}
+
+
+// Section personnages
+#characters {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  h3 {
+    margin-right: 700px;
+  }
+}
+
+.swiper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+
+
+// Section Lieu 
+#place {
+  display: flex;
+  background-image: url("/wp-content/themes/foce-child/images/Studio_Koukaki-image_place.png");
+  width: 100%;
+  min-height: 699px;
+  background-size: cover;
+  h3 {
+    background-image: url("./assets/images/orange_place_bg.png");
+    margin-bottom: -1em;
+  }
+  > div {
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 6em;
+    p {
+      padding-left: 5em;
+    }
+  }
+}
+
+
+// Section Studio
+#studio {
+  position: relative;
+  margin-top: 3em;
+  h2 {
+    overflow: hidden;
+    background-image: url("/wp-content/themes/foce-child/images/purple_studio_bg.png");
+    &::before {
+      content: url('/wp-content/themes/foce-child/images/random_flower.png');
+      position: absolute;
+      left: -1em;
+      top: 0;
+    }
+    &::after {
+      content: url('/wp-content/themes/foce-child/images/flower.png');
+      position: absolute;
+      right: 1em;
+      top: 1.2em;
+    }
+  }
+}
+
+
+// Section nomination
+#nomination {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 300px;;
+  margin-top: 150px;
+
+    overflow: hidden;
+    background-image: url("");
+    &::before {
+      content: url("/wp-content/themes/foce-child/images/Sunflower.png");
+      position: absolute;
+      left: -200px;
+      top: 0em;
+    }
+    &::after {
+      content: url("/wp-content/themes/foce-child/images/orchid.png");
+      position: absolute;
+      right: -4em;
+      bottom: 17.8em;
+      z-index: 5;
+    }
+}
+
+// Section Footer
+.site-footer {
+  position: relative;
+  display: flex;
+  padding-top: 18em;
+  padding-bottom: 1em;
+  overflow: hidden;
+
+  &::before {
+    content: url('');
+    position: absolute;
+    left: 4em;
+    top: 0em;
+  }
+  &::after {
+    content: url('');
+    position: absolute;
+    right: -4em;
+    bottom: 7.8em;
+
+  }
+  ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+
+    li {
+      flex: 1;
+      text-align: center;
+      a {
+        text-decoration: none;
+      }
+    }
+    &::after {
+      content: url('./assets/images/hibiscus_footer.png');
+      position: absolute;
+      left: calc(50% - 323px);
+      bottom: -28.5em;
+      z-index: -1;
+    }
+  }
 }

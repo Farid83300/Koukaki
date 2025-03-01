@@ -1,22 +1,32 @@
 
 // Apparition des titres au Scroll
 document.addEventListener("DOMContentLoaded", function () {
-    const sectionTitles = document.querySelectorAll(".section-title");
+    const titles = document.querySelectorAll("h2, h3");
 
-    const revealOnScroll = () => {
-        sectionTitles.forEach(title => {
-            const titleTop = title.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
+    // Ajout de la classe not-visible au chargement
+    titles.forEach(title => {
+        title.classList.add("not-visible");
+    });
 
-            if (titleTop < windowHeight * 0.85) {
-                title.classList.add("visible");
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top < window.innerHeight - 100 && 
+            rect.bottom >= 0
+        );
+    }
+
+    function handleScroll() {
+        titles.forEach(title => {
+            if (isElementInViewport(title)) {
+                setTimeout(() => {
+                    title.classList.remove("not-visible"); // Supprime la classe de blocage
+                    title.classList.add("fade-in-visible"); // Applique l'effet
+                }, 200);
             }
         });
-    };
+    }
 
-    // Exécuter la fonction au chargement et lors du scroll
-    revealOnScroll();
-    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
 });
-
-
