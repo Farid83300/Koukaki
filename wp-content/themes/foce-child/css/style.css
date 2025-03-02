@@ -40,8 +40,19 @@
   animation: fadeInDown 1s ease-out forwards;
 }
 
-.fade-in-up-logo {
-  animation: fadeInUpLogo 1s ease-out forwards;
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.logo {
+  animation: fadeInUpLogo 1s ease-out forwards, floating 3s ease-in-out infinite 1s;
   position: absolute;
   transform: translate(-50%, -50%);
   width: 200px;
@@ -216,15 +227,16 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 #nomination::before {
   content: url("/wp-content/themes/foce-child/images/Sunflower.png");
   position: absolute;
-  left: -200px;
+  left: 0px;
   top: 0em;
+  z-index: 15;
 }
 #nomination::after {
   content: url("/wp-content/themes/foce-child/images/orchid.png");
   position: absolute;
   right: -4em;
   bottom: 17.8em;
-  z-index: 5;
+  z-index: 15;
 }
 
 .site-footer {
@@ -261,7 +273,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   text-decoration: none;
 }
 .site-footer ul::after {
-  content: url("./assets/images/hibiscus_footer.png");
+  content: url("/wp-content/themes/foce-child/images/hibiscus_footer.png");
   position: absolute;
   left: calc(50% - 323px);
   bottom: -28.5em;

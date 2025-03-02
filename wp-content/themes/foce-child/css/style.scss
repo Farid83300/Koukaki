@@ -44,16 +44,23 @@
     animation: fadeInDown 1s ease-out forwards;
   }
 
-  .fade-in-up-logo {
-    animation: fadeInUpLogo 1s ease-out forwards;
-    // CSS pour l'incrustation dans le vidéo de la bannière
-    position: absolute;
-    transform: translate(-50%, -50%);
-    width: 200px; // Ajustez selon la taille souhaitée
-    height: auto;
-    z-index: 10;
-  }
 
+// Flottement du logo
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+  .logo {
+    animation: fadeInUpLogo 1s ease-out forwards, floating 3s ease-in-out infinite 1s;
+    // CSS pour l'incrustation du logo dans la bannière video
+      position: absolute;
+      transform: translate(-50%, -50%);
+      width: 200px; // Ajustez selon la taille souhaitée
+      height: auto;
+      z-index: 10;
+  }
   
 // Apparition des titre au Scroll
 /* Assurer que h2 et h3 sont positionnés correctement */
@@ -123,6 +130,8 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   z-index: -1;
 }
 
+
+
 // Section Histoire
 .story {
   position: relative;
@@ -159,6 +168,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   }
 }
 
+// Carrousel
 .swiper {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -223,6 +233,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 }
 
 
+
 // Section nomination
 #nomination {
   display: flex;
@@ -238,15 +249,16 @@ h2.fade-in-visible span, h3.fade-in-visible span {
     &::before {
       content: url("/wp-content/themes/foce-child/images/Sunflower.png");
       position: absolute;
-      left: -200px;
+      left: 0px;
       top: 0em;
+      z-index: 15;
     }
     &::after {
       content: url("/wp-content/themes/foce-child/images/orchid.png");
       position: absolute;
       right: -4em;
       bottom: 17.8em;
-      z-index: 5;
+      z-index: 15;
     }
 }
 
@@ -286,7 +298,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
       }
     }
     &::after {
-      content: url('./assets/images/hibiscus_footer.png');
+      content: url('/wp-content/themes/foce-child/images/hibiscus_footer.png');
       position: absolute;
       left: calc(50% - 323px);
       bottom: -28.5em;

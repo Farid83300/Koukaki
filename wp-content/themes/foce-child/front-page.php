@@ -4,11 +4,11 @@ get_header();
 ?>
 
     <main id="primary" class="site-main">
-        <section class="banner fade-in-down">
-            <video id="banner-video" alt="Bannière animée" autoplay loop muted>
-                <source src="./wp-content/themes/foce-child/videos/Studio+Koukaki-vidéo+header+sans+son+(1).mp4" type="video/mp4">
+        <section class="banner">
+            <video class="fade-in-down" id="banner-video" alt="Bannière animée" autoplay loop muted>
+                <source src="/wp-content/themes/foce-child/videos/Studio+Koukaki-vidéo+header+sans+son+(1).mp4" type="video/mp4">
             </video>
-            <img class="fade-in-up-logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            <img class="logo" src="/wp-content/themes/foce-child/images/logo.png'" alt="logo Fleurs d'oranger & chats errants">
         </section>
         <section id="#story" class="story fade-in-up">
             <h2><span>L'histoire</span></h2>
