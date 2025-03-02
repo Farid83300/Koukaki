@@ -147,10 +147,15 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 .story h2::after {
   content: url("/wp-content/themes/foce-child/images/Sunflower-small.png");
   position: absolute;
-  left: -400px;
+  display: block;
+  height: 154px;
+  width: 154px;
+  left: -393px;
   top: 6em;
   z-index: 5;
-  animation: rotate 5s linear infinite;
+  animation: rotate 10s linear infinite;
+  transform-origin: center;
+  transform: translateX(-50%) rotate(0deg);
 }
 .story__article {
   display: flex;
@@ -171,9 +176,14 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 .story__article::after {
   content: url("/wp-content/themes/foce-child/images/Hibiscus.png");
   position: absolute;
+  display: block;
+  height: 188px;
+  width: 188px;
   left: calc(50% + 414px);
   top: 2em;
-  animation: rotate 5s linear infinite;
+  animation: rotate 10s linear infinite;
+  transform-origin: center;
+  transform: translateX(-50%) rotate(0deg);
 }
 .story #characters {
   display: flex;
@@ -225,17 +235,27 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 }
 #studio h2::before {
   content: url("/wp-content/themes/foce-child/images/random_flower.png");
+  height: 199px;
+  width: 203px;
   position: absolute;
+  display: block;
   left: -1em;
   top: 0;
-  animation: rotate 5s linear infinite;
+  animation: rotate 10s linear infinite;
+  transform-origin: center;
+  transform: translateX(-50%) rotate(0deg);
 }
 #studio h2::after {
   content: url("/wp-content/themes/foce-child/images/flower.png");
+  height: 109px;
+  width: 109px;
   position: absolute;
+  display: block;
   right: 1em;
   top: 1.2em;
-  animation: rotate 5s linear infinite;
+  animation: rotate 10s linear infinite;
+  transform-origin: center;
+  transform: translateX(-50%) rotate(0deg);
 }
 
 #nomination {
@@ -252,19 +272,29 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 }
 #nomination::before {
   content: url("/wp-content/themes/foce-child/images/Sunflower.png");
+  height: 216px;
+  width: 216px;
   position: absolute;
+  display: block;
   left: 5em;
   top: -9em;
   z-index: 15;
-  animation: rotate 5s linear infinite;
+  animation: rotate 10s linear infinite;
+  transform-origin: center;
+  transform: translateX(-50%) rotate(0deg);
 }
 #nomination::after {
   content: url("/wp-content/themes/foce-child/images/orchid.png");
+  height: 169px;
+  width: 173px;
   position: absolute;
+  display: block;
   right: -4em;
   bottom: 28.8em;
   z-index: 15;
-  animation: rotate 5s linear infinite;
+  animation: rotate 10s linear infinite;
+  transform-origin: center;
+  transform: translateX(-50%) rotate(0deg);
 }
 
 #img-oscars {
@@ -312,8 +342,13 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 .site-footer ul::after {
   content: url("/wp-content/themes/foce-child/images/hibiscus_footer.png");
   position: absolute;
+  display: block;
+  height: 646px;
+  width: 646px;
   left: calc(50% - 323px);
   bottom: -28.5em;
   z-index: -1;
-  animation: rotate 5s linear infinite;
+  animation: rotate 10s linear infinite;
+  transform-origin: center;
+  transform: translateX(-50%) rotate(0deg);
 }/*# sourceMappingURL=style.css.map */
