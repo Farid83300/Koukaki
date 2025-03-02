@@ -31,3 +31,5 @@ document.addEventListener("DOMContentLoaded", function () {
     handleScroll();
 });
 
+
+// Effet de Parallax entre la bannière et le logo

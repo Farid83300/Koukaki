@@ -21,7 +21,7 @@
             </div>
             <div class="swiper-slide">
                 <img src="./wp-content/themes/foce-child/images/Jaakuna.png" alt="Chat bleu tacheté de blanc">
-                </div>
+            </div>
         </div>
     </div>
 </article>

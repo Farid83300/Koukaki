@@ -25,7 +25,7 @@
 @keyframes fadeInUpLogo {
   from {
     opacity: 0;
-    transform: translateY(400px);
+    transform: translateY(100px);
   }
   to {
     opacity: 1;
@@ -60,6 +60,14 @@
   z-index: 10;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* Assurer que h2 et h3 sont positionnés correctement */
 h2, h3 {
   position: relative;
@@ -72,7 +80,6 @@ h3::before, h3::after {
   position: absolute;
   display: block;
   opacity: 1; /* S’assurer qu’ils restent visibles */
-  transition: none !important; /* Aucune animation sur eux */
 }
 
 /* Effet uniquement sur le texte du titre */
@@ -133,54 +140,70 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 .story h2::before {
   content: url("/wp-content/themes/foce-child/images/sunflower_leaves.png");
   position: absolute;
-  display: block;
-  left: -443px;
+  left: -435px;
   top: 1.8em;
+  z-index: 5;
 }
 .story h2::after {
-  content: url("/wp-content/themes/foce-child/images/Sunflower.png");
+  content: url("/wp-content/themes/foce-child/images/Sunflower-small.png");
   position: absolute;
-  display: block;
   left: -400px;
   top: 6em;
   z-index: 5;
+  animation: rotate 5s linear infinite;
 }
-
-#characters {
+.story__article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  font-size: 15px;
+  padding-bottom: 2em;
+}
+.story__article::before {
+  content: url("/wp-content/themes/foce-child/images/hibiscus_leaves.png");
+  position: absolute;
+  left: 50%;
+  top: 8em;
+  z-index: -1;
+}
+.story__article::after {
+  content: url("/wp-content/themes/foce-child/images/Hibiscus.png");
+  position: absolute;
+  left: calc(50% + 414px);
+  top: 2em;
+  animation: rotate 5s linear infinite;
+}
+.story #characters {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-#characters h3 {
+.story #characters h3 {
   margin-right: 700px;
 }
-
-.swiper {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.swiper-slide {
+.story .swiper-slide {
+  background-position: center;
   background-size: cover;
+  width: 400px;
+  height: 440px;
 }
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
+.story .swiper-slide img {
+  max-width: 100%;
 }
-
-#place {
+.story #place {
   display: flex;
-  background-image: url("/wp-content/themes/foce-child/images/Studio_Koukaki-image_place.png");
+  background-image: url("/wp-content/themes/foce-child/images/place_bg_2.png");
   width: 100%;
   min-height: 699px;
   background-size: cover;
 }
-#place h3 {
-  background-image: url("./assets/images/orange_place_bg.png");
+.story #place h3 {
+  background-image: url("/wp-content/themes/foce-child/images/orange_place_bg.png");
   margin-bottom: -1em;
 }
-#place > div {
+.story #place > div {
   max-width: 580px;
   display: flex;
   flex-direction: column;
@@ -188,7 +211,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   align-items: flex-start;
   margin-left: 6em;
 }
-#place > div p {
+.story #place > div p {
   padding-left: 5em;
 }
 
@@ -205,12 +228,14 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   position: absolute;
   left: -1em;
   top: 0;
+  animation: rotate 5s linear infinite;
 }
 #studio h2::after {
   content: url("/wp-content/themes/foce-child/images/flower.png");
   position: absolute;
   right: 1em;
   top: 1.2em;
+  animation: rotate 5s linear infinite;
 }
 
 #nomination {
@@ -220,8 +245,8 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   align-content: center;
   justify-content: center;
   width: 100%;
-  height: 550px;
-  margin-top: 150px;
+  height: 350px;
+  margin-top: 200px;
   overflow: visible;
   background-image: url("");
 }
@@ -229,23 +254,25 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   content: url("/wp-content/themes/foce-child/images/Sunflower.png");
   position: absolute;
   left: 5em;
-  top: -7em;
+  top: -9em;
   z-index: 15;
+  animation: rotate 5s linear infinite;
 }
 #nomination::after {
   content: url("/wp-content/themes/foce-child/images/orchid.png");
   position: absolute;
   right: -4em;
-  bottom: 40.8em;
+  bottom: 28.8em;
   z-index: 15;
+  animation: rotate 5s linear infinite;
 }
 
 #img-oscars {
   display: flex;
   align-content: center;
   justify-content: center;
-  width: 75%;
-  height: 70%;
+  width: 966px;
+  height: 250px;
   z-index: -1;
 }
 
@@ -288,4 +315,5 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   left: calc(50% - 323px);
   bottom: -28.5em;
   z-index: -1;
+  animation: rotate 5s linear infinite;
 }/*# sourceMappingURL=style.css.map */
