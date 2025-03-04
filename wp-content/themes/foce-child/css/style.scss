@@ -1,111 +1,112 @@
+
 /* SCSS du Thème enfant */
 
 /* Fade in des sections au chargement de la page */
 @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(200px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(200px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-200px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* Keyframe pour contre-carré le fade in down de la bannière */
 @keyframes fadeInUpLogo {
-    from {
-      opacity: 0;
-      transform: translateY(100px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(100px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
-  .fade-in-up {
-    animation: fadeInUp 1s ease-out forwards;
-  }
+.fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
 
-  .fade-in-down {
-    animation: fadeInDown 1s ease-out forwards;
-  }
+.fade-in-down {
+  animation: fadeInDown 1s ease-out forwards;
+}
 
 
 // Flottement du logo
 @keyframes floating {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+0% { transform: translateY(0px); }
+50% { transform: translateY(-20px); }
+100% { transform: translateY(0px); }
 }
 
-  .logo {
-    animation: fadeInUpLogo 1s ease-out forwards, floating 3s ease-in-out infinite 1s;
-    // CSS pour l'incrustation du logo dans la bannière video
-      position: absolute;
-      transform: translate(-50%, -50%);
-      width: 200px; // Ajustez selon la taille souhaitée
-      height: auto;
-      z-index: 10;
-  }
+.logo {
+  animation: fadeInUpLogo 1s ease-out forwards, floating 3s ease-in-out infinite 1s;
+  // CSS pour l'incrustation du logo dans la bannière video
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 200px; // Ajustez selon la taille souhaitée
+    height: auto;
+    z-index: 10;
+}
 
-  // Rotation des fleurs
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+// Rotation des fleurs
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
-  
-  
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 // Apparition des titre au Scroll
 /* Assurer que h2 et h3 sont positionnés correctement */
 h2, h3 {
-  position: relative;
+position: relative;
 }
 
 /* Restaurer les before/after */
 h2::before, h2::after,
 h3::before, h3::after {
-  content: "";
-  position: absolute;
-  display: block;
-  opacity: 1; /* S’assurer qu’ils restent visibles */
+content: "";
+position: absolute;
+display: block;
+opacity: 1; /* S’assurer qu’ils restent visibles */
 }
 
 /* Effet uniquement sur le texte du titre */
 h2 span, h3 span {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+display: inline-block;
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 /* Masquer au chargement */
 h2.not-visible span, h3.not-visible span {
-  opacity: 0 !important;
-  transform: translateY(30px) !important;
+opacity: 0 !important;
+transform: translateY(30px) !important;
 }
 
 /* Effet de fade-in up */
 h2.fade-in-visible span, h3.fade-in-visible span {
-  opacity: 1;
-  transform: translateY(0);
+opacity: 1;
+transform: translateY(0);
 }
 
 
@@ -113,271 +114,280 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 
 // Bannière vidéo
 .banner {
-  background-image: url("/wp-content/themes/foce-child/images/banner.png");
-  display: flex;
-  position: relative;
-  background-image: none;
-  min-height: 806px;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  img {
-    margin-top: -10%;
-    width: 50%;
-  }
+background-image: url("/wp-content/themes/foce-child/images/banner.png");
+display: flex;
+position: relative;
+background-image: none;
+min-height: 806px;
+background-size: cover;
+display: flex;
+justify-content: center;
+align-items: center;
+img {
+  margin-top: -10%;
+  width: 50%;
+}
 }
 
 .banner-video {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
+width: 100%;
+height: auto;
+object-fit: cover;
+position: fixed;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+z-index: -1;
 }
 
 
 
 // Section Histoire
 .story {
-  position: relative;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+h2{
+  &::before {
+    content: url('/wp-content/themes/foce-child/images/sunflower_leaves.png');
+    position: absolute;
+    left: -435px;
+    top: 1.8em;
+    z-index: 5;
+  }
+  &::after {
+    content: url('/wp-content/themes/foce-child/images/Sunflower-small.png');
+    position: absolute;
+    display: block;
+    height: 154px;
+    width: 154px;
+    left: -393px;
+    top: 6em;
+    z-index: 5;
+    animation: rotate 10s linear infinite;
+    transform-origin: center;
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+&__article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  h2{
-    &::before {
-      content: url('/wp-content/themes/foce-child/images/sunflower_leaves.png');
-      position: absolute;
-      left: -435px;
-      top: 1.8em;
-      z-index: 5;
-    }
-    &::after {
-      content: url('/wp-content/themes/foce-child/images/Sunflower-small.png');
-      position: absolute;
-      display: block;
-      height: 154px;
-      width: 154px;
-      left: -393px;
-      top: 6em;
-      z-index: 5;
-      animation: rotate 10s linear infinite;
-      transform-origin: center;
-      transform: translateX(-50%) rotate(0deg);
-    }
+  text-align: center;
+  width: 50%;
+  font-size: 15px;
+  padding-bottom: 2em;
+  &::before {
+    content: url('/wp-content/themes/foce-child/images/hibiscus_leaves.png');
+    position: absolute;
+    left: 50%;
+    top: 8em;
+    z-index: -1;
   }
+  &::after {
+    content: url('/wp-content/themes/foce-child/images/Hibiscus.png');
+    position: absolute;
+    display: block;
+    height: 188px;
+    width: 188px;
+    left: calc(50% + 414px);
+    top: 2em;
+    animation: rotate 10s linear infinite;
+    transform-origin: center;
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
+#characters {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  h3 {
+    margin-right: 700px;
+  }
+}
 
-  &__article {
+  // Carrousel
+.swiper-slide {
+  width: 400px;
+  height: 440px;
+}
+
+.swiper-slide img {
+  height: 440px;
+  width: 400px;
+}
+
+.mySwiper {
+  max-width: 1440px; /* ou width: 100% si ton site est responsive */
+  margin: 0 auto; /* Pour le centrer */
+  overflow: hidden;
+}
+
+
+
+// Section Lieu
+#place {
+  display: flex;
+  background-image: url("/wp-content/themes/foce-child/images/place_bg_2.png");
+  width: 100%;
+  min-height: 699px;
+  background-size: cover;
+  h3 {
+    background-image: url("/wp-content/themes/foce-child/images/orange_place_bg.png");
+    margin-bottom: -1em;
+  }
+  > div {
+    max-width: 580px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 50%;
-    font-size: 15px;
-    padding-bottom: 2em;
-    &::before {
-      content: url('/wp-content/themes/foce-child/images/hibiscus_leaves.png');
-      position: absolute;
-      left: 50%;
-      top: 8em;
-      z-index: -1;
-    }
-    &::after {
-      content: url('/wp-content/themes/foce-child/images/Hibiscus.png');
-      position: absolute;
-      display: block;
-      height: 188px;
-      width: 188px;
-      left: calc(50% + 414px);
-      top: 2em;
-      animation: rotate 10s linear infinite;
-      transform-origin: center;
-      transform: translateX(-50%) rotate(0deg);
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 6em;
+    p {
+      padding-left: 5em;
     }
   }
-  #characters {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    h3 {
-      margin-right: 700px;
-    }
-  }
-
-    // Carrousel
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 400px;
-    height: 440px;
-  }
-
-  .swiper-slide img {
-    max-width: 100%;
-  }
-  #place {
-    display: flex;
-    background-image: url("/wp-content/themes/foce-child/images/place_bg_2.png");
-    width: 100%;
-    min-height: 699px;
-    background-size: cover;
-    h3 {
-      background-image: url("/wp-content/themes/foce-child/images/orange_place_bg.png");
-      margin-bottom: -1em;
-    }
-    > div {
-      max-width: 580px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      margin-left: 6em;
-      p {
-        padding-left: 5em;
-      }
-    }
-  }
+}
 }
 
 
 
 // Section Studio
 #studio {
-  position: relative;
-  margin-top: 3em;
-  h2 {
-    overflow: hidden;
-    background-image: url("/wp-content/themes/foce-child/images/purple_studio_bg.png");
-    &::before {
-      content: url('/wp-content/themes/foce-child/images/random_flower.png');
-      height: 199px;
-      width: 203px;
-      position: absolute;
-      display: block;
-      left: -1em;
-      top: 0;
-      animation: rotate 10s linear infinite;
-      transform-origin: center;
-      transform: translateX(-50%) rotate(0deg);
-    }
-    &::after {
-      content: url('/wp-content/themes/foce-child/images/flower.png');
-      height: 109px;
-      width: 109px;
-      position: absolute;
-      display: block;
-      right: 1em;
-      top: 1.2em;
-      animation: rotate 10s linear infinite;
-      transform-origin: center;
-      transform: translateX(-50%) rotate(0deg);
-    }
+position: relative;
+margin-top: 3em;
+h2 {
+  overflow: hidden;
+  background-image: url("/wp-content/themes/foce-child/images/purple_studio_bg.png");
+  &::before {
+    content: url('/wp-content/themes/foce-child/images/random_flower.png');
+    height: 199px;
+    width: 203px;
+    position: absolute;
+    display: block;
+    left: -1em;
+    top: 0;
+    animation: rotate 10s linear infinite;
+    transform-origin: center;
+    transform: translateX(-50%) rotate(0deg);
   }
+  &::after {
+    content: url('/wp-content/themes/foce-child/images/flower.png');
+    height: 109px;
+    width: 109px;
+    position: absolute;
+    display: block;
+    right: 1em;
+    top: 1.2em;
+    animation: rotate 10s linear infinite;
+    transform-origin: center;
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
 }
 
 
 
 // Section nomination
 #nomination {
-  display: flex;
-  position: relative;
-  margin-top: 5em;
-  align-content: center;
-  justify-content: center;
-  width: 100%;
-  height: 350px;;
-  margin-top: 200px;
+display: flex;
+position: relative;
+margin-top: 5em;
+align-content: center;
+justify-content: center;
+width: 100%;
+height: 350px;;
+margin-top: 200px;
 
-    overflow: visible;
-    background-image: url("");
-    &::before {
-      content: url("/wp-content/themes/foce-child/images/Sunflower.png");
-      height: 216px;
-      width: 216px;
-      position: absolute;
-      display: block;
-      left: 5em;
-      top: -9em;
-      z-index: 15;
-      animation: rotate 10s linear infinite;
-      transform-origin: center;
-      transform: translateX(-50%) rotate(0deg);
-    }
-    &::after {
-      content: url("/wp-content/themes/foce-child/images/orchid.png");
-      height: 169px;
-      width: 173px;
-      position: absolute;
-      display: block;
-      right: -4em;
-      bottom: 28.8em;
-      z-index: 15;
-      animation: rotate 10s linear infinite;
-      transform-origin: center;
-      transform: translateX(-50%) rotate(0deg);
-    }
+  overflow: visible;
+  background-image: url("");
+  &::before {
+    content: url("/wp-content/themes/foce-child/images/Sunflower.png");
+    height: 216px;
+    width: 216px;
+    position: absolute;
+    display: block;
+    left: 5em;
+    top: -9em;
+    z-index: 15;
+    animation: rotate 10s linear infinite;
+    transform-origin: center;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  &::after {
+    content: url("/wp-content/themes/foce-child/images/orchid.png");
+    height: 169px;
+    width: 173px;
+    position: absolute;
+    display: block;
+    right: -4em;
+    bottom: 28.8em;
+    z-index: 15;
+    animation: rotate 10s linear infinite;
+    transform-origin: center;
+    transform: translateX(-50%) rotate(0deg);
+  }
 }
 
 #img-oscars{
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  width: 966px;
-  height: 250px;
-  z-index: -1;
+display: flex;
+align-content: center;
+justify-content: center;
+width: 966px;
+height: 250px;
+z-index: -1;
 }
 
 // Section Footer
 .site-footer {
-  position: relative;
-  display: flex;
-  padding-top: 18em;
-  padding-bottom: 1em;
-  overflow: hidden;
+position: relative;
+display: flex;
+padding-top: 18em;
+padding-bottom: 1em;
+overflow: hidden;
 
-  &::before {
-    content: url('');
-    position: absolute;
-    left: 4em;
-    top: 0em;
+&::before {
+  content: url('');
+  position: absolute;
+  left: 4em;
+  top: 0em;
+}
+&::after {
+  content: url('');
+  position: absolute;
+  right: -4em;
+  bottom: 7.8em;
+
+}
+ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+
+  li {
+    flex: 1;
+    text-align: center;
+    a {
+      text-decoration: none;
+    }
   }
   &::after {
-    content: url('');
+    content: url('/wp-content/themes/foce-child/images/hibiscus_footer.png');
     position: absolute;
-    right: -4em;
-    bottom: 7.8em;
-
+    display: block;
+    height: 646px;
+    width: 646px;
+    left: calc(50% - 323px);
+    bottom: -28.5em;
+    z-index: -1;
+    animation: rotate 10s linear infinite;
+    transform-origin: center;
+    transform: translateX(-50%) rotate(0deg);
   }
-  ul{
-    padding: 0;
-    margin: 0;
-    display: flex;
-    width: 100%;
-    list-style-type: none;
-
-    li {
-      flex: 1;
-      text-align: center;
-      a {
-        text-decoration: none;
-      }
-    }
-    &::after {
-      content: url('/wp-content/themes/foce-child/images/hibiscus_footer.png');
-      position: absolute;
-      display: block;
-      height: 646px;
-      width: 646px;
-      left: calc(50% - 323px);
-      bottom: -28.5em;
-      z-index: -1;
-      animation: rotate 10s linear infinite;
-      transform-origin: center;
-      transform: translateX(-50%) rotate(0deg);
-    }
-  }
+}
 }

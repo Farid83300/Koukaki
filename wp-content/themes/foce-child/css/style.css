@@ -194,13 +194,17 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   margin-right: 700px;
 }
 .story .swiper-slide {
-  background-position: center;
-  background-size: cover;
   width: 400px;
   height: 440px;
 }
 .story .swiper-slide img {
-  max-width: 100%;
+  height: 440px;
+  width: 400px;
+}
+.story .mySwiper {
+  max-width: 1440px; /* ou width: 100% si ton site est responsive */
+  margin: 0 auto; /* Pour le centrer */
+  overflow: hidden;
 }
 .story #place {
   display: flex;

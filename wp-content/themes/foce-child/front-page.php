@@ -25,7 +25,8 @@ get_header();
             );
             $characters_query = new WP_Query($args);
             ?>
-    <?php get_template_part('template-parts/personnages')?>
+            
+            <?php get_template_part('template-parts/personnages')?>
     
             <article id="place" class="fade-in-up">
                 <div>
