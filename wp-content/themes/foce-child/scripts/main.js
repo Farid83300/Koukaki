@@ -33,3 +33,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Effet de Parallax entre la bannière et le logo
+
+
+
+
+// NavBAR
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    menuToggle.addEventListener("click", function () {
+        this.classList.toggle("open"); // Animation du bouton hamburger
+        menu.classList.toggle("open"); // Animation du menu
+    });
+
+    // Fermeture du menu au clic en dehors
+    document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+            menuToggle.classList.remove("open");
+            menu.classList.remove("open");
+        }
+    });
+});
+
+menuToggle.addEventListener("click", function () {
+    document.querySelector(".site-title").style.transform = "none"; 
+});
+

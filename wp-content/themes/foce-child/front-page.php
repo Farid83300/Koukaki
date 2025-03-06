@@ -46,10 +46,11 @@ get_header();
             </div>
         </section>
 
+        <?php get_template_part('template-parts/nomination')?>
+
     </main><!-- #main -->
 
-    <?php get_template_part('template-parts/nomination')?>
-
+    
 
 <?php
 get_footer();

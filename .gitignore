@@ -10,7 +10,6 @@ sitemap.xml
 sitemap.xml.gz
 
 # Ignorer les répertoires générés automatiquement par WordPress
-/wp-content/uploads/
 /wp-content/cache/
 /wp-content/upgrade/
 

@@ -51,15 +51,6 @@
     transform: translateY(0px);
   }
 }
-.logo {
-  animation: fadeInUpLogo 1s ease-out forwards, floating 3s ease-in-out infinite 1s;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: auto;
-  z-index: 10;
-}
-
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -102,6 +93,107 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   transform: translateY(0);
 }
 
+.site-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.site-title {
+  position: fixed;
+  transition: none;
+}
+
+.main-navigation {
+  background-color: #FFD5A2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.main-navigation .line {
+  height: 3px;
+  background-color: #000;
+  display: block;
+  margin: auto;
+  margin-block: -2px;
+  width: 50px;
+}
+
+.menu-toggle {
+  position: absolute;
+  right: 150px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-toggle.open .line:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+.menu-toggle.open .line:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open .line:nth-child(3) {
+  transform: translateY(-12px) rotate(-45deg);
+}
+
+.menu {
+  position: fixed;
+  width: 1440px;
+  height: 100vh;
+  background: #FFF5E9;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  padding-bottom: 250px;
+  margin-left: 400px;
+}
+.menu ul li {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 84px;
+  margin: 80px;
+}
+.menu ul a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.menu ul a:hover {
+  text-shadow: 0px 0px 14px #FF5C00;
+}
+
+.tag-studio {
+  position: absolute;
+  margin-top: 1000px;
+  margin-left: 680px;
+}
+
+.logo-menu {
+  position: absolute;
+  top: 20px;
+  margin-left: 620px;
+}
+
+.menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
 .banner {
   background-image: url("/wp-content/themes/foce-child/images/banner.png");
   display: flex;
@@ -129,6 +221,15 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   top: 0;
   bottom: 0;
   z-index: -1;
+}
+
+.logo {
+  animation: fadeInUpLogo 1s ease-out forwards, floating 3s ease-in-out infinite 1s;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: auto;
+  z-index: 10;
 }
 
 .story {
@@ -193,18 +294,17 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 .story #characters h3 {
   margin-right: 700px;
 }
+.story #characters img {
+  width: 100%;
+  height: auto;
+}
+.story .swiper-wrapper {
+  height: 440px;
+  width: 100%;
+}
 .story .swiper-slide {
-  width: 400px;
-  height: 440px;
-}
-.story .swiper-slide img {
   height: 440px;
   width: 400px;
-}
-.story .mySwiper {
-  max-width: 1440px; /* ou width: 100% si ton site est responsive */
-  margin: 0 auto; /* Pour le centrer */
-  overflow: hidden;
 }
 .story #place {
   display: flex;
@@ -232,6 +332,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 #studio {
   position: relative;
   margin-top: 3em;
+  overflow: hidden;
 }
 #studio h2 {
   overflow: hidden;
@@ -260,6 +361,10 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   animation: rotate 10s linear infinite;
   transform-origin: center;
   transform: translateX(-50%) rotate(0deg);
+}
+
+.site-main {
+  overflow: hidden;
 }
 
 #nomination {

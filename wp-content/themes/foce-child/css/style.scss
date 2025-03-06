@@ -53,15 +53,7 @@
 100% { transform: translateY(0px); }
 }
 
-.logo {
-  animation: fadeInUpLogo 1s ease-out forwards, floating 3s ease-in-out infinite 1s;
-  // CSS pour l'incrustation du logo dans la bannière video
-    position: absolute;
-    transform: translate(-50%, -50%);
-    width: 200px; // Ajustez selon la taille souhaitée
-    height: auto;
-    z-index: 10;
-}
+
 
 // Rotation des fleurs
 @keyframes rotate {
@@ -109,24 +101,133 @@ opacity: 1;
 transform: translateY(0);
 }
 
+//////////////////////////////////////////////////////////////////////
+// NavBAR
+.site-header {
+  width: 100%;
+	position: sticky;
+	top:0;
+}
+
+.site-title {
+  position: fixed; // ou fixed si tu veux qu'il reste toujours visible
+  transition: none; // Désactive toute animation non souhaitée
+}
+
+.main-navigation {
+	background-color: #FFD5A2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	width: 100%;
+  
+	.line {
+		height: 3px;
+		background-color: #000;
+		display: block;
+		margin: auto;
+		margin-block: -2px;
+		width: 50px;
+	}
+}
+
+// Style du bouton hamburger
+.menu-toggle {    
+  position: absolute;
+  right: 150px; 
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &.open {
+      .line:nth-child(1) {
+          transform: translateY(12px) rotate(45deg);
+      }
+      .line:nth-child(2) {
+          opacity: 0;
+      }
+      .line:nth-child(3) {
+          transform: translateY(-12px) rotate(-45deg);
+      }
+  }
+}
+
+// Style du menu en plein écran
+.menu {
+  position: fixed;
+  width: 1440px;
+  height: 100vh;
+  background: #FFF5E9;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+      padding-bottom: 250px;
+      margin-left: 400px;
+      li {
+        font-family: "Roboto Mono";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 84px;
+        margin: 80px;
+      }
+      a {
+          color: #333;
+          text-decoration: none;
+          transition: color 0.3s;
+          &:hover {
+            text-shadow: 0px 0px 14px #FF5C00;
+          }
+      }
+  }
+}
+
+.tag-studio {
+  position: absolute;
+  margin-top: 1000px;
+  margin-left: 680px;
+}
+
+.logo-menu {
+  position: absolute;
+  top: 20px;
+  margin-left: 620px;
+}
+
+// Affichage du menu quand il est actif
+.menu.open {
+  opacity: 1;
+  visibility: visible;
+}
 
 
 
+//////////////////////////////////////////////////////////////////////
 // Bannière vidéo
 .banner {
 background-image: url("/wp-content/themes/foce-child/images/banner.png");
-display: flex;
-position: relative;
-background-image: none;
-min-height: 806px;
-background-size: cover;
-display: flex;
-justify-content: center;
-align-items: center;
-img {
-  margin-top: -10%;
-  width: 50%;
-}
+  display: flex;
+  position: relative;
+  background-image: none;
+  min-height: 806px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    margin-top: -10%;
+    width: 50%;
+  }
 }
 
 .banner-video {
@@ -141,8 +242,18 @@ bottom: 0;
 z-index: -1;
 }
 
+// Logo
+.logo {
+  animation: fadeInUpLogo 1s ease-out forwards, floating 3s ease-in-out infinite 1s;
+  // CSS pour l'incrustation du logo dans la bannière video
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 200px; // Ajustez selon la taille souhaitée
+    height: auto;
+    z-index: 10;
+}
 
-
+//////////////////////////////////////////////////////////////////////
 // Section Histoire
 .story {
 position: relative;
@@ -200,6 +311,9 @@ h2{
     transform: translateX(-50%) rotate(0deg);
   }
 }
+
+//////////////////////////////////////////////////////////////////////
+// Section personnages
 #characters {
   display: flex;
   flex-direction: column;
@@ -207,58 +321,56 @@ h2{
   h3 {
     margin-right: 700px;
   }
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
-  // Carrousel
+.swiper-wrapper {
+  height: 440px;
+  width: 100%;
+}
+
 .swiper-slide {
-  width: 400px;
-  height: 440px;
-}
-
-.swiper-slide img {
   height: 440px;
   width: 400px;
 }
 
-.mySwiper {
-  max-width: 1440px; /* ou width: 100% si ton site est responsive */
-  margin: 0 auto; /* Pour le centrer */
-  overflow: hidden;
-}
 
-
-
+//////////////////////////////////////////////////////////////////////
 // Section Lieu
 #place {
-  display: flex;
-  background-image: url("/wp-content/themes/foce-child/images/place_bg_2.png");
-  width: 100%;
-  min-height: 699px;
-  background-size: cover;
-  h3 {
-    background-image: url("/wp-content/themes/foce-child/images/orange_place_bg.png");
-    margin-bottom: -1em;
-  }
-  > div {
-    max-width: 580px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-left: 6em;
-    p {
-      padding-left: 5em;
+    background-image: url("/wp-content/themes/foce-child/images/place_bg_2.png");
+    width: 100%;
+    min-height: 699px;
+    background-size: cover;
+    h3 {
+      background-image: url("/wp-content/themes/foce-child/images/orange_place_bg.png");
+      margin-bottom: -1em;
+    }
+    > div {
+      max-width: 580px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left: 6em;
+      p {
+        padding-left: 5em;
+      }
     }
   }
 }
-}
 
 
-
+//////////////////////////////////////////////////////////////////////
 // Section Studio
 #studio {
 position: relative;
 margin-top: 3em;
+overflow: hidden;
 h2 {
   overflow: hidden;
   background-image: url("/wp-content/themes/foce-child/images/purple_studio_bg.png");
@@ -289,8 +401,11 @@ h2 {
 }
 }
 
+.site-main {
+  overflow: hidden;
+}
 
-
+//////////////////////////////////////////////////////////////////////
 // Section nomination
 #nomination {
 display: flex;
@@ -341,6 +456,8 @@ height: 250px;
 z-index: -1;
 }
 
+
+//////////////////////////////////////////////////////////////////////
 // Section Footer
 .site-footer {
 position: relative;
