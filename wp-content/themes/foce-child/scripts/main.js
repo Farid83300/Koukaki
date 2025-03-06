@@ -56,7 +56,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-menuToggle.addEventListener("click", function () {
-    document.querySelector(".site-title").style.transform = "none"; 
-});
 

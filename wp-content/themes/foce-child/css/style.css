@@ -42,13 +42,19 @@
 
 @keyframes floating {
   0% {
-    transform: translateY(0px);
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -15px);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translate(-10px, 10px);
+  }
+  75% {
+    transform: translate(15px, -5px);
   }
   100% {
-    transform: translateY(0px);
+    transform: translate(0, 0);
   }
 }
 @keyframes rotate {
@@ -91,6 +97,10 @@ h2.not-visible span, h3.not-visible span {
 h2.fade-in-visible span, h3.fade-in-visible span {
   opacity: 1;
   transform: translateY(0);
+}
+
+.site-main {
+  overflow: hidden;
 }
 
 .site-header {
@@ -157,7 +167,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   list-style: none;
   padding: 0;
   text-align: center;
-  padding-bottom: 250px;
+  padding-bottom: 100px;
   margin-left: 400px;
 }
 .menu ul li {
@@ -192,6 +202,71 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 .menu.open {
   opacity: 1;
   visibility: visible;
+  overflow: hidden;
+}
+
+.orchid-menu {
+  position: absolute;
+  top: 100px;
+  left: -60px;
+  animation: rotate 15s linear infinite;
+  transform-origin: center;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.chat-violet-menu {
+  position: absolute;
+  top: 250px;
+  left: 300px;
+  animation: floating 3s ease-in-out infinite 1s;
+}
+
+.fleur-orange-menu {
+  position: absolute;
+  left: 250px;
+  animation: rotate 15s linear infinite;
+  transform-origin: center;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.chat-orange-menu {
+  position: absolute;
+  bottom: 250px;
+  left: 120px;
+  animation: floating 3s ease-in-out infinite 1s;
+}
+
+.fleur-blanche-menu {
+  position: absolute;
+  top: 150px;
+  right: 150px;
+  animation: rotate 15s linear infinite;
+  transform-origin: center;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.fleur-rose-menu {
+  position: absolute;
+  right: -30px;
+  top: 530px;
+  animation: rotate 15s linear infinite;
+  transform-origin: center;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.chat-noir-menu {
+  position: absolute;
+  right: 230px;
+  animation: floating 3s ease-in-out infinite 1s;
+}
+
+.hibiscus-menu {
+  position: absolute;
+  bottom: -18.5em;
+  right: -23.5em;
+  animation: rotate 15s linear infinite;
+  transform-origin: center;
+  transform: translateX(-50%) rotate(0deg);
 }
 
 .banner {
@@ -254,7 +329,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   left: -393px;
   top: 6em;
   z-index: 5;
-  animation: rotate 10s linear infinite;
+  animation: rotate 15s linear infinite;
   transform-origin: center;
   transform: translateX(-50%) rotate(0deg);
 }
@@ -282,7 +357,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   width: 188px;
   left: calc(50% + 414px);
   top: 2em;
-  animation: rotate 10s linear infinite;
+  animation: rotate 15s linear infinite;
   transform-origin: center;
   transform: translateX(-50%) rotate(0deg);
 }
@@ -346,7 +421,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   display: block;
   left: -1em;
   top: 0;
-  animation: rotate 10s linear infinite;
+  animation: rotate 15s linear infinite;
   transform-origin: center;
   transform: translateX(-50%) rotate(0deg);
 }
@@ -358,13 +433,9 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   display: block;
   right: 1em;
   top: 1.2em;
-  animation: rotate 10s linear infinite;
+  animation: rotate 15s linear infinite;
   transform-origin: center;
   transform: translateX(-50%) rotate(0deg);
-}
-
-.site-main {
-  overflow: hidden;
 }
 
 #nomination {
@@ -388,7 +459,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   left: 5em;
   top: -9em;
   z-index: 15;
-  animation: rotate 10s linear infinite;
+  animation: rotate 15s linear infinite;
   transform-origin: center;
   transform: translateX(-50%) rotate(0deg);
 }
@@ -401,7 +472,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   right: -4em;
   bottom: 28.8em;
   z-index: 15;
-  animation: rotate 10s linear infinite;
+  animation: rotate 15s linear infinite;
   transform-origin: center;
   transform: translateX(-50%) rotate(0deg);
 }
@@ -457,7 +528,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   left: calc(50% - 323px);
   bottom: -28.5em;
   z-index: -1;
-  animation: rotate 10s linear infinite;
+  animation: rotate 15s linear infinite;
   transform-origin: center;
   transform: translateX(-50%) rotate(0deg);
 }/*# sourceMappingURL=style.css.map */
