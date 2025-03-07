@@ -1,5 +1,6 @@
 
-// Apparition des titres au Scroll
+//////////////////////////////////////////////////////////////////////
+// Apparition des Titres au Scroll
 document.addEventListener("DOMContentLoaded", function () {
     const titles = document.querySelectorAll("h2, h3");
 
@@ -32,12 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+//////////////////////////////////////////////////////////////////////
 // Effet de Parallax entre la bannière et le logo
 
 
 
-
-// NavBAR
+//////////////////////////////////////////////////////////////////////
+// NavBAR et Menu Hamburger
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".menu");
@@ -56,4 +58,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+//////////////////////////////////////////////////////////////////////
+// Animation des Clouds
+document.addEventListener("DOMContentLoaded", function () {
+    const section = document.querySelector("#studio"); // Ajusté pour la bonne section
+    const bigCloud = document.querySelector(".big-cloud");
+    const littleCloud = document.querySelector(".little-cloud");
+    
+    if (!section || !bigCloud || !littleCloud) return;
+    
+    function isSectionVisible() {
+        const rect = section.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom > 0;
+    }
+    
+    function handleScroll() {
+        if (!isSectionVisible()) return;
+        
+        const scrollPosition = window.scrollY;
+        const maxDisplacement = 300;
+        
+        // Calcul du déplacement proportionnellement à la position de la section
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionHeight = section.offsetHeight;
+        const scrollFactor = Math.min(Math.max((window.innerHeight - sectionTop) / sectionHeight, 0), 1);
+        const displacement = -maxDisplacement * scrollFactor;
+        
+        bigCloud.style.transform = `translateX(${displacement}px)`;
+        littleCloud.style.transform = `translateX(${displacement}px)`;
+    }
+    
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Exécuter une première fois au chargement
+});
 

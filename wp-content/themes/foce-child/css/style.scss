@@ -209,6 +209,7 @@ transform: translateY(0);
   position: absolute;
   top: 20px;
   margin-left: 620px;
+  animation: floating 3s ease-in-out infinite 1s;
 }
 
 // Affichage du menu quand il est actif
@@ -436,6 +437,18 @@ h2{
       }
     }
   }
+}
+
+.big-cloud {
+  position: absolute;
+  right: 90px;
+  top: 60px;
+}
+
+.little-cloud {
+  position: absolute;
+  right: 500px;
+  top: 250px;
 }
 
 

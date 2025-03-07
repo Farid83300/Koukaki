@@ -32,6 +32,8 @@ get_header();
                 <div>
                     <h3><span>Le Lieu</span></h3>
                     <p class="fade-in-down"><?php echo get_theme_mod('place'); ?></p>
+                    <img class="big-cloud" src="wp-content\themes\foce-child\images\big_cloud.png" alt="Gros nuage">
+                    <img class="little-cloud" src="wp-content\themes\foce-child\images\little_cloud.png" alt="Petit nuage">
                 </div>
 
             </article>

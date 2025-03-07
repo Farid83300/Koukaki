@@ -197,6 +197,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   position: absolute;
   top: 20px;
   margin-left: 620px;
+  animation: floating 3s ease-in-out infinite 1s;
 }
 
 .menu.open {
@@ -402,6 +403,18 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 }
 .story #place > div p {
   padding-left: 5em;
+}
+
+.big-cloud {
+  position: absolute;
+  right: 90px;
+  top: 60px;
+}
+
+.little-cloud {
+  position: absolute;
+  right: 500px;
+  top: 250px;
 }
 
 #studio {

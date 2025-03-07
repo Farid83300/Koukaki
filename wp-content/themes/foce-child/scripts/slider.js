@@ -1,7 +1,7 @@
 
-// Slider personnages
 
-// Initialisation Swiper
+//////////////////////////////////////////////////////////////////////
+// Slider Swipper.js des Personnages
 const swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
   grabCursor: true,
