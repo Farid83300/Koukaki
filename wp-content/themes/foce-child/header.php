@@ -36,23 +36,23 @@
                 <span class="line"></span>
             </button>		
         </nav>     
-            <div class="menu">
-                <img class="logo-menu" src="/wp-content/themes/foce-child/images/images-menu/Image logo en paralax.png'" alt="logo Fleurs d'oranger & chats errants">
-                <ul>
-                    <li><a href="#story">Histoire</a></li>
-                    <li><a href="#characters">Personnages</a></li>
-                    <li><a href="#place">Lieu</a></li>
-                    <li><a href="#studio">Studio Koukaki</a></li>
-                </ul>
-                <span class="tag-studio"></p>Studio Koukaki</p></span>
-                <img class="orchid-menu" src="wp-content\themes\foce-child\images\orchid.png" alt="Orchidée">
-                <img class="chat-violet-menu" src="wp-content\themes\foce-child\images\images-menu\cat.png" alt="Chat violet">
-                <img class="fleur-orange-menu" src="wp-content\themes\foce-child\images\images-menu\Flower.png" alt="Petite fleur orange">
-                <img class="chat-orange-menu" src="wp-content\themes\foce-child\images\images-menu\cat-orange.png" alt="Chat orange">
-                <img class="fleur-blanche-menu" src="wp-content\themes\foce-child\images\Sunflower.png" alt="Fleur blanche">
-                <img class="fleur-rose-menu" src="wp-content\themes\foce-child\images\images-menu\random_flower.png" alt="Petite fleur rose">
-                <img class="chat-noir-menu" src="wp-content\themes\foce-child\images\images-menu\Group 180.png" alt="Chat noir">
-                <img class="hibiscus-menu" src="wp-content\themes\foce-child\images\hibiscus_footer.png" alt="Grosse hibiscus">
+        <div class="menu">
+            <img class="logo-menu" src="/wp-content/themes/foce-child/images/images-menu/logo-menu.png'" alt="logo Fleurs d'oranger & chats errants">
+            <ul>
+                <li><a href="#story">Histoire</a></li>
+                <li><a href="#characters">Personnages</a></li>
+                <li><a href="#place">Lieu</a></li>
+                <li><a href="#studio">Studio Koukaki</a></li>
+            </ul>
+            <span class="tag-studio"></p>Studio Koukaki</p></span>
+            <img class="orchid-menu" src="wp-content\themes\foce-child\images\orchid.png" alt="Orchidée">
+            <img class="chat-violet-menu" src="wp-content\themes\foce-child\images\images-menu\cat.png" alt="Chat violet">
+            <img class="fleur-orange-menu" src="wp-content\themes\foce-child\images\images-menu\Flower.png" alt="Petite fleur orange">
+            <img class="chat-orange-menu" src="wp-content\themes\foce-child\images\images-menu\cat-orange.png" alt="Chat orange">
+            <img class="fleur-blanche-menu" src="wp-content\themes\foce-child\images\Sunflower.png" alt="Fleur blanche">
+            <img class="fleur-rose-menu" src="wp-content\themes\foce-child\images\images-menu\random_flower.png" alt="Petite fleur rose">
+            <img class="chat-noir-menu" src="wp-content\themes\foce-child\images\images-menu\Group 180.png" alt="Chat noir">
+            <img class="hibiscus-menu" src="wp-content\themes\foce-child\images\hibiscus_footer.png" alt="Grosse hibiscus">
             </div>  
 <!-- #site-navigation -->
 	</header><!-- #masthead -->

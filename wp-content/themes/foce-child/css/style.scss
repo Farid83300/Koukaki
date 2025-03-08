@@ -1,7 +1,8 @@
 
 /* SCSS du Thème enfant */
 
-/* Fade in des sections au chargement de la page */
+//////////////////////////////////////////////////////////////////////
+// Fade in des sections au chargement de la page
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -24,7 +25,7 @@
   }
 }
 
-/* Keyframe pour contre-carré le fade in down de la bannière */
+// Keyframe pour contre-carré le fade in down de la bannière */
 @keyframes fadeInUpLogo {
   from {
     opacity: 0;
@@ -35,16 +36,6 @@
     transform: translateY(0);
   }
 }
-
-
-.fade-in-up {
-  animation: fadeInUp 1s ease-out forwards;
-}
-
-.fade-in-down {
-  animation: fadeInDown 1s ease-out forwards;
-}
-
 
 // Flottement du logo et des chats dans le menu toggle
 @keyframes floating {
@@ -67,23 +58,30 @@
   }
 }
 
+// Classe CSS pour les effets fade in
+.fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
 
-// Apparition des titre au Scroll
-/* Assurer que h2 et h3 sont positionnés correctement */
+.fade-in-down {
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+// Assurer que h2 et h3 sont positionnés correctement
 h2, h3 {
 position: relative;
 }
 
-/* Restaurer les before/after */
+// Restaurer les before/after
 h2::before, h2::after,
 h3::before, h3::after {
 content: "";
 position: absolute;
 display: block;
-opacity: 1; /* S’assurer qu’ils restent visibles */
+opacity: 1; // S’assurer qu’ils restent visibles
 }
 
-/* Effet uniquement sur le texte du titre */
+// Effet uniquement sur le texte du titre
 h2 span, h3 span {
 display: inline-block;
 opacity: 0;
@@ -91,13 +89,13 @@ transform: translateY(30px);
 transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Masquer au chargement */
+// Masquer au chargement
 h2.not-visible span, h3.not-visible span {
 opacity: 0 !important;
 transform: translateY(30px) !important;
 }
 
-/* Effet de fade-in up */
+// Effet de fade-in up 
 h2.fade-in-visible span, h3.fade-in-visible span {
 opacity: 1;
 transform: translateY(0);
@@ -199,6 +197,14 @@ transform: translateY(0);
   }
 }
 
+
+// Affichage du menu quand il est actif
+.menu.open {
+  opacity: 1;
+  visibility: visible;
+  overflow: hidden;
+}
+
 .tag-studio {
   position: absolute;
   margin-top: 1000px;
@@ -212,12 +218,6 @@ transform: translateY(0);
   animation: floating 3s ease-in-out infinite 1s;
 }
 
-// Affichage du menu quand il est actif
-.menu.open {
-  opacity: 1;
-  visibility: visible;
-  overflow: hidden;
-}
 
 //////////////////////////////////////////////////////////////////////
 // Positionement des images dans le menu toggle
@@ -305,117 +305,110 @@ background-image: url("/wp-content/themes/foce-child/images/banner.png");
   }
 }
 
-.banner-video {
-width: 100%;
-height: auto;
-object-fit: cover;
-position: fixed;
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
-z-index: -1;
-}
+  .banner-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  }
 
-// Logo
-.logo {
-  animation: fadeInUpLogo 1s ease-out forwards, floating 3s ease-in-out infinite 1s;
-  // CSS pour l'incrustation du logo dans la bannière video
-    position: absolute;
-    transform: translate(-50%, -50%);
-    width: 200px; // Ajustez selon la taille souhaitée
-    height: auto;
-    z-index: 10;
-}
+  .logo {
+    animation: fadeInUpLogo 1s ease-out forwards, floating 3s ease-in-out infinite 1s;
+    // CSS pour l'incrustation du logo dans la bannière video
+      position: absolute;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: auto;
+      z-index: 10;
+  }
 
 //////////////////////////////////////////////////////////////////////
 // Section Histoire
 .story {
-position: relative;
-display: flex;
-flex-direction: column;
-align-items: center;
-h2{
-  &::before {
-    content: url('/wp-content/themes/foce-child/images/sunflower_leaves.png');
-    position: absolute;
-    left: -435px;
-    top: 1.8em;
-    z-index: 5;
-  }
-  &::after {
-    content: url('/wp-content/themes/foce-child/images/Sunflower-small.png');
-    position: absolute;
-    display: block;
-    height: 154px;
-    width: 154px;
-    left: -393px;
-    top: 6em;
-    z-index: 5;
-    animation: rotate 15s linear infinite;
-    transform-origin: center;
-    transform: translateX(-50%) rotate(0deg);
-  }
-}
-
-&__article {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  width: 50%;
-  font-size: 15px;
-  padding-bottom: 2em;
-  &::before {
-    content: url('/wp-content/themes/foce-child/images/hibiscus_leaves.png');
-    position: absolute;
-    left: 50%;
-    top: 8em;
-    z-index: -1;
+  h2{
+    &::before {
+      content: url('/wp-content/themes/foce-child/images/sunflower_leaves.png');
+      position: absolute;
+      left: -435px;
+      top: 1.8em;
+      z-index: 5;
+    }
+    &::after {
+      content: url('/wp-content/themes/foce-child/images/Sunflower-small.png');
+      position: absolute;
+      display: block;
+      height: 154px;
+      width: 154px;
+      left: -393px;
+      top: 6em;
+      z-index: 5;
+      animation: rotate 15s linear infinite;
+      transform-origin: center;
+      transform: translateX(-50%) rotate(0deg);
+    }
   }
-  &::after {
-    content: url('/wp-content/themes/foce-child/images/Hibiscus.png');
-    position: absolute;
-    display: block;
-    height: 188px;
-    width: 188px;
-    left: calc(50% + 414px);
-    top: 2em;
-    animation: rotate 15s linear infinite;
-    transform-origin: center;
-    transform: translateX(-50%) rotate(0deg);
+  &__article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    font-size: 15px;
+    padding-bottom: 2em;
+    &::before {
+      content: url('/wp-content/themes/foce-child/images/hibiscus_leaves.png');
+      position: absolute;
+      left: 50%;
+      top: 8em;
+      z-index: -1;
+    }
+    &::after {
+      content: url('/wp-content/themes/foce-child/images/Hibiscus.png');
+      position: absolute;
+      display: block;
+      height: 188px;
+      width: 188px;
+      left: calc(50% + 414px);
+      top: 2em;
+      animation: rotate 15s linear infinite;
+      transform-origin: center;
+      transform: translateX(-50%) rotate(0deg);
+    }
   }
-}
-
-//////////////////////////////////////////////////////////////////////
-// Section personnages
-#characters {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  h3 {
-    margin-right: 700px;
-  }
-  img {
+  //////////////////////////////////////////////////////////////////////
+  // Section Personnages
+  #characters {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: auto;
+    h3 {
+      margin-right: 700px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
-}
-
-.swiper-wrapper {
-  height: 440px;
-  width: 100%;
-}
-
-.swiper-slide {
-  height: 440px;
-  width: 400px;
-}
-
-
-//////////////////////////////////////////////////////////////////////
-// Section Lieu
-#place {
+  .swiper-wrapper {
+    height: 440px;
+    width: 100%;
+  }
+  .swiper-slide {
+    height: 440px;
+    width: 400px;
+  }
+  //////////////////////////////////////////////////////////////////////
+  // Section Lieu
+  #place {
     display: flex;
     background-image: url("/wp-content/themes/foce-child/images/place_bg_2.png");
     width: 100%;
@@ -437,71 +430,65 @@ h2{
       }
     }
   }
-}
-
-.big-cloud {
-  position: absolute;
-  right: 90px;
-  top: 60px;
-}
-
-.little-cloud {
-  position: absolute;
-  right: 500px;
-  top: 250px;
-}
-
-
-//////////////////////////////////////////////////////////////////////
-// Section Studio
-#studio {
-position: relative;
-margin-top: 3em;
-overflow: hidden;
-h2 {
-  overflow: hidden;
-  background-image: url("/wp-content/themes/foce-child/images/purple_studio_bg.png");
-  &::before {
-    content: url('/wp-content/themes/foce-child/images/random_flower.png');
-    height: 199px;
-    width: 203px;
+  .big-cloud {
     position: absolute;
-    display: block;
-    left: -1em;
-    top: 0;
-    animation: rotate 15s linear infinite;
-    transform-origin: center;
-    transform: translateX(-50%) rotate(0deg);
+    right: 90px;
+    top: 60px;
   }
-  &::after {
-    content: url('/wp-content/themes/foce-child/images/flower.png');
-    height: 109px;
-    width: 109px;
+
+  .little-cloud {
     position: absolute;
-    display: block;
-    right: 1em;
-    top: 1.2em;
-    animation: rotate 15s linear infinite;
-    transform-origin: center;
-    transform: translateX(-50%) rotate(0deg);
+    right: 500px;
+    top: 250px;
+  }
+  //////////////////////////////////////////////////////////////////////
+  // Section Studio
+  #studio {
+    position: relative;
+    overflow: hidden;
+    h2 {
+      overflow: hidden;
+      background-image: url("/wp-content/themes/foce-child/images/purple_studio_bg.png");
+      &::before {
+        content: url('/wp-content/themes/foce-child/images/random_flower.png');
+        height: 199px;
+        width: 203px;
+        position: absolute;
+        display: block;
+        left: -1em;
+        top: 0;
+        animation: rotate 15s linear infinite;
+        transform-origin: center;
+        transform: translateX(-50%) rotate(0deg);
+      }
+      &::after {
+        content: url('/wp-content/themes/foce-child/images/flower.png');
+        height: 109px;
+        width: 109px;
+        position: absolute;
+        display: block;
+        right: 1em;
+        top: 1.2em;
+        animation: rotate 15s linear infinite;
+        transform-origin: center;
+        transform: translateX(-50%) rotate(0deg);
+      }
+    }
   }
 }
-}
-
 
 
 //////////////////////////////////////////////////////////////////////
 // Section nomination
 #nomination {
-display: flex;
-position: relative;
-margin-top: 5em;
-align-content: center;
-justify-content: center;
-width: 100%;
-height: 350px;;
-margin-top: 200px;
-
+  display: flex;
+  position: relative;
+  margin-top: 5em;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 350px;;
+  margin-top: 200px;
   overflow: visible;
   background-image: url("");
   &::before {

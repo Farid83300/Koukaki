@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /* SCSS du Thème enfant */
-/* Fade in des sections au chargement de la page */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -21,7 +20,6 @@
     transform: translateY(0);
   }
 }
-/* Keyframe pour contre-carré le fade in down de la bannière */
 @keyframes fadeInUpLogo {
   from {
     opacity: 0;
@@ -32,14 +30,6 @@
     transform: translateY(0);
   }
 }
-.fade-in-up {
-  animation: fadeInUp 1s ease-out forwards;
-}
-
-.fade-in-down {
-  animation: fadeInDown 1s ease-out forwards;
-}
-
 @keyframes floating {
   0% {
     transform: translate(0, 0);
@@ -65,21 +55,26 @@
     transform: rotate(360deg);
   }
 }
-/* Assurer que h2 et h3 sont positionnés correctement */
+.fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.fade-in-down {
+  animation: fadeInDown 1s ease-out forwards;
+}
+
 h2, h3 {
   position: relative;
 }
 
-/* Restaurer les before/after */
 h2::before, h2::after,
 h3::before, h3::after {
   content: "";
   position: absolute;
   display: block;
-  opacity: 1; /* S’assurer qu’ils restent visibles */
+  opacity: 1;
 }
 
-/* Effet uniquement sur le texte du titre */
 h2 span, h3 span {
   display: inline-block;
   opacity: 0;
@@ -87,13 +82,11 @@ h2 span, h3 span {
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Masquer au chargement */
 h2.not-visible span, h3.not-visible span {
   opacity: 0 !important;
   transform: translateY(30px) !important;
 }
 
-/* Effet de fade-in up */
 h2.fade-in-visible span, h3.fade-in-visible span {
   opacity: 1;
   transform: translateY(0);
@@ -187,6 +180,12 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   text-shadow: 0px 0px 14px #FF5C00;
 }
 
+.menu.open {
+  opacity: 1;
+  visibility: visible;
+  overflow: hidden;
+}
+
 .tag-studio {
   position: absolute;
   margin-top: 1000px;
@@ -198,12 +197,6 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   top: 20px;
   margin-left: 620px;
   animation: floating 3s ease-in-out infinite 1s;
-}
-
-.menu.open {
-  opacity: 1;
-  visibility: visible;
-  overflow: hidden;
 }
 
 .orchid-menu {
@@ -404,29 +397,25 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 .story #place > div p {
   padding-left: 5em;
 }
-
-.big-cloud {
+.story .big-cloud {
   position: absolute;
   right: 90px;
   top: 60px;
 }
-
-.little-cloud {
+.story .little-cloud {
   position: absolute;
   right: 500px;
   top: 250px;
 }
-
-#studio {
+.story #studio {
   position: relative;
-  margin-top: 3em;
   overflow: hidden;
 }
-#studio h2 {
+.story #studio h2 {
   overflow: hidden;
   background-image: url("/wp-content/themes/foce-child/images/purple_studio_bg.png");
 }
-#studio h2::before {
+.story #studio h2::before {
   content: url("/wp-content/themes/foce-child/images/random_flower.png");
   height: 199px;
   width: 203px;
@@ -438,7 +427,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   transform-origin: center;
   transform: translateX(-50%) rotate(0deg);
 }
-#studio h2::after {
+.story #studio h2::after {
   content: url("/wp-content/themes/foce-child/images/flower.png");
   height: 109px;
   width: 109px;

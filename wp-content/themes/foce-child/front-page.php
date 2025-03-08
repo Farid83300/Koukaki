@@ -4,7 +4,7 @@ get_header();
 ?>
 
     <main id="primary" class="site-main">
-        <section class="banner parallax">
+        <section class="banner">
             <video class="fade-in-down" id="banner-video" alt="Bannière animée" autoplay loop muted>
                 <source src="/wp-content/themes/foce-child/videos/Studio+Koukaki-vidéo+header+sans+son+(1).mp4" type="video/mp4">
             </video>

@@ -34,11 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //////////////////////////////////////////////////////////////////////
-// Effet de Parallax entre la bannière et le logo
-
-
-
-//////////////////////////////////////////////////////////////////////
 // NavBAR et Menu Hamburger
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
@@ -62,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //////////////////////////////////////////////////////////////////////
 // Animation des Clouds
 document.addEventListener("DOMContentLoaded", function () {
-    const section = document.querySelector("#studio"); // Ajusté pour la bonne section
+    const section = document.querySelector("#studio");
     const bigCloud = document.querySelector(".big-cloud");
     const littleCloud = document.querySelector(".little-cloud");
     
@@ -76,13 +71,14 @@ document.addEventListener("DOMContentLoaded", function () {
     function handleScroll() {
         if (!isSectionVisible()) return;
         
-        const scrollPosition = window.scrollY;
         const maxDisplacement = 300;
         
-        // Calcul du déplacement proportionnellement à la position de la section
+        // Calcul du facteur de déplacement
         const sectionTop = section.getBoundingClientRect().top;
         const sectionHeight = section.offsetHeight;
         const scrollFactor = Math.min(Math.max((window.innerHeight - sectionTop) / sectionHeight, 0), 1);
+        
+        // Assurer un déplacement maximal de 300px
         const displacement = -maxDisplacement * scrollFactor;
         
         bigCloud.style.transform = `translateX(${displacement}px)`;
