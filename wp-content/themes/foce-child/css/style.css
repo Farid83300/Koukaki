@@ -94,12 +94,6 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   overflow: hidden;
 }
 
-.site-header {
-  width: 100%;
-  position: sticky;
-  top: 0;
-}
-
 .site-title {
   position: fixed;
   transition: none;
@@ -152,7 +146,6 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   align-items: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 .menu ul {
   list-style: none;
@@ -440,15 +433,10 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 }
 
 #nomination {
-  display: flex;
   position: relative;
-  margin-top: 5em;
-  align-content: center;
-  justify-content: center;
-  height: 350px;
-  margin-top: 200px;
-  overflow: visible;
-  background-image: url("");
+  display: flex;
+  height: 600px;
+  padding-top: 170px;
 }
 #nomination::before {
   content: url("/wp-content/themes/foce-child/images/Sunflower.png");
@@ -457,7 +445,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   position: absolute;
   display: block;
   left: 5em;
-  top: -9em;
+  top: 5em;
   z-index: 15;
   animation: rotate 15s linear infinite;
   transform-origin: center;
@@ -469,21 +457,42 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   width: 173px;
   position: absolute;
   display: block;
-  right: -4em;
-  bottom: 28.8em;
+  right: -5em;
+  bottom: 30.8em;
   z-index: 15;
   animation: rotate 15s linear infinite;
   transform-origin: center;
   transform: translateX(-50%) rotate(0deg);
 }
 
-#img-oscars {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  width: 966px;
-  height: 250px;
-  z-index: -1;
+.prix-oscars {
+  position: absolute;
+  background-image: url("/wp-content/themes/foce-child/images/bg_nomination.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 300px;
+  width: 800px;
+  left: 200px;
+}
+.prix-oscars p {
+  padding-top: 10px;
+  padding-left: 65px;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  letter-spacing: -2%;
+  color: #FFF5E9;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.img-oscars {
+  position: absolute;
+  width: 279px;
+  height: 129px;
+  right: 200px;
+  top: 210px;
 }
 
 .site-footer {
@@ -491,7 +500,6 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   display: flex;
   padding-top: 18em;
   padding-bottom: 1em;
-  overflow: hidden;
 }
 .site-footer::before {
   content: url("");

@@ -4,5 +4,8 @@
 ?>
 
 <section id="nomination" class="fade-in-up">
-        <img id="img-oscars" class="fade-in-up" src="\wp-content\themes\foce-child\images\section-oscars.png" alt="Oscars logo">
+        <div class="prix-oscars">
+        <p>Fleurs d'oranger & chats errants<br>est nominé aux Oscars Short<br>Film Animated de 2022 !</p>
+        </div>
+        <img class="img-oscars" src="\wp-content\themes\foce-child\images\oscars.png" alt="Oscars logo">
 </section>
