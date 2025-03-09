@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/* SCSS du Thème enfant */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -280,7 +278,6 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 }
 
 .banner-video {
-  width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -358,7 +355,6 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 .story #characters {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 .story #characters h3 {
   margin-right: 700px;
@@ -378,7 +374,6 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 .story #place {
   display: flex;
   background-image: url("/wp-content/themes/foce-child/images/place_bg_2.png");
-  width: 100%;
   min-height: 699px;
   background-size: cover;
 }
@@ -397,25 +392,29 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 .story #place > div p {
   padding-left: 5em;
 }
-.story .big-cloud {
+
+.big-cloud {
   position: absolute;
   right: 90px;
   top: 60px;
+  filter: blur(16.5px);
 }
-.story .little-cloud {
+
+.little-cloud {
   position: absolute;
   right: 500px;
   top: 250px;
+  filter: blur(16.5px);
 }
-.story #studio {
+
+#studio {
   position: relative;
-  overflow: hidden;
 }
-.story #studio h2 {
+#studio h2 {
   overflow: hidden;
   background-image: url("/wp-content/themes/foce-child/images/purple_studio_bg.png");
 }
-.story #studio h2::before {
+#studio h2::before {
   content: url("/wp-content/themes/foce-child/images/random_flower.png");
   height: 199px;
   width: 203px;
@@ -427,7 +426,7 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   transform-origin: center;
   transform: translateX(-50%) rotate(0deg);
 }
-.story #studio h2::after {
+#studio h2::after {
   content: url("/wp-content/themes/foce-child/images/flower.png");
   height: 109px;
   width: 109px;
@@ -446,7 +445,6 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   margin-top: 5em;
   align-content: center;
   justify-content: center;
-  width: 100%;
   height: 350px;
   margin-top: 200px;
   overflow: visible;
