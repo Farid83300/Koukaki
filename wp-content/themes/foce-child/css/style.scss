@@ -22,7 +22,7 @@
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 }
 
@@ -30,15 +30,28 @@
 @keyframes fadeInUpLogo {
   from {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(calc(100px + var(--logo-parallax-y)));
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(var(--logo-parallax-y));
   }
 }
 
-// Flottement du logo et des chats dans le menu toggle
+// Flottement du logo
+@keyframes floatingLogo {
+  0% {
+    transform: translateX(0) translateY(var(--logo-parallax-y));
+}
+50% {
+    transform: translateX(25px) translateY(var(--logo-parallax-y));
+}
+100% {
+    transform: translateX(0) translateY(var(--logo-parallax-y));
+}
+}
+
+// Flottement des chats dans le menu toggle
 @keyframes floating {
   0% {transform: translate(0, 0);}
   25% {transform: translate(10px, -15px);}
@@ -46,8 +59,6 @@
   75% {transform: translate(15px, -5px);}
   100% {transform: translate(0, 0);}
 }
-
-
 
 // Rotation des fleurs
 @keyframes rotate {
@@ -104,10 +115,10 @@ transform: translateY(0);
 
 //////////////////////////////////////////////////////////////////////
 // NavBAR
-
 .site-main {
   overflow: hidden;
 }
+
 
 .site-title {
   position: fixed; // ou fixed si tu veux qu'il reste toujours visible
@@ -120,6 +131,7 @@ transform: translateY(0);
   align-items: center;
   justify-content: center;
 	width: 100%;
+  z-index: 1000;
 	.line {
 		height: 3px;
 		background-color: #000;
@@ -190,7 +202,6 @@ transform: translateY(0);
   }
 }
 
-
 // Affichage du menu quand il est actif
 .menu.open {
   opacity: 1;
@@ -210,7 +221,6 @@ transform: translateY(0);
   margin-left: 620px;
   animation: floating 3s ease-in-out infinite 1s;
 }
-
 
 //////////////////////////////////////////////////////////////////////
 // Positionement des images dans le menu toggle
@@ -279,45 +289,25 @@ transform: translateY(0);
   transform: translateX(-50%) rotate(0deg);
 }
 
-
 //////////////////////////////////////////////////////////////////////
 // Bannière vidéo
 .banner {
-background-image: url("/wp-content/themes/foce-child/images/banner.png");
+  background-image: url("/wp-content/themes/foce-child/images/banner.png");
   display: flex;
   position: relative;
   background-image: none;
-  min-height: 806px;
+  width: 100%;
+  height: auto;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  img {
-    margin-top: -10%;
-    width: 50%;
-  }
 }
 
-.banner-video {
-  height: auto;
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-.logo {
-  animation: fadeInUpLogo 1s ease-out forwards, floating 3s ease-in-out infinite 1s;
-  // CSS pour l'incrustation du logo dans la bannière video    
+.logo {    
+  animation: fadeInUpLogo 1s ease-out forwards, floatingLogo 3s ease-in-out infinite;
   position: absolute;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: auto;
   z-index: 10;
-}     
+  --logo-parallax-y: 0px; /* Valeur par défaut */
+}
+
 
 //////////////////////////////////////////////////////////////////////
 // Section Histoire
@@ -376,6 +366,7 @@ background-image: url("/wp-content/themes/foce-child/images/banner.png");
       transform: translateX(-50%) rotate(0deg);
     }
   }
+
   //////////////////////////////////////////////////////////////////////
   // Section Personnages
   #characters {
@@ -397,6 +388,7 @@ background-image: url("/wp-content/themes/foce-child/images/banner.png");
     height: 440px;
     width: 400px;
   }
+
   //////////////////////////////////////////////////////////////////////
   // Section Lieu
   #place {
@@ -590,3 +582,17 @@ background-image: url("/wp-content/themes/foce-child/images/banner.png");
 
 
 ////////// Media queries //////////
+/// Smartphones
+@media screen and (max-width: 767px) {
+  
+}
+
+/// Tablettes
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  
+}
+
+/// Ordinateurs portables
+@media (min-width: 1024px) {
+
+}

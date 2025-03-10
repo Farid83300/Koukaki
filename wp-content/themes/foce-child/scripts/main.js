@@ -54,6 +54,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+//////////////////////////////////////////////////////////////////////
+// Parallax Logo
+document.addEventListener("DOMContentLoaded", function () {
+    const logo = document.querySelector(".logo");
+    
+    if (!logo) return;
+    
+    window.addEventListener("scroll", function() {
+        // Calcul du décalage vertical basé sur le défilement
+        // Le facteur 0.3 détermine l'intensité de l'effet de parallax
+        const parallaxOffset = window.scrollY * 0.29;
+        
+        // Application de la transformation de parallax
+        // Nous utilisons un attribut personnalisé pour stocker la valeur
+        logo.setAttribute('data-parallax', parallaxOffset);
+        updateLogoTransform(logo);
+    });
+    
+    // Fonction pour mettre à jour les transformations combinées
+    function updateLogoTransform(element) {
+        // Nous n'ajoutons pas directement de style transform pour ne pas interférer
+        // avec les animations CSS, nous utilisons une variable CSS personnalisée
+        element.style.setProperty('--logo-parallax-y', `${element.getAttribute('data-parallax') || 0}px`);
+    }
+});
+
+
 //////////////////////////////////////////////////////////////////////
 // Animation des Clouds
 document.addEventListener("DOMContentLoaded", function () {
