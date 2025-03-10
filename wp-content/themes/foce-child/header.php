@@ -26,14 +26,12 @@
 
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
-            <ul>
-                <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-            </ul>
-            <button class="menu-toggle" aria-label="Ouvrir le menu"> 
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"> 
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
-            </button>		
+            </button>		            
+            <a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
         </nav>     
         <div class="menu">
             <img class="logo-menu" src="/wp-content/themes/foce-child/images/images-menu/logo-menu.png'" alt="logo Fleurs d'oranger & chats errants">

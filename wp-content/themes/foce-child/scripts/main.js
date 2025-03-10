@@ -37,8 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // NavBAR et Menu Hamburger
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
+    if (menuToggle) {
+        // Force l'affichage du bouton
+        menuToggle.style.display = 'flex';
+      }
     const menu = document.querySelector(".menu");
-
     menuToggle.addEventListener("click", function () {
         this.classList.toggle("open"); // Animation du bouton hamburger
         menu.classList.toggle("open"); // Animation du menu
@@ -52,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
 
 
 //////////////////////////////////////////////////////////////////////

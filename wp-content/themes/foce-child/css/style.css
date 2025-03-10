@@ -106,24 +106,17 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   overflow: hidden;
 }
 
-.site-title {
-  position: fixed;
-  transition: none;
-}
-
 .main-navigation {
-  background-color: #FFD5A2;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  z-index: 1000;
+  position: relative;
 }
 .main-navigation .line {
   height: 3px;
   background-color: #000;
   display: block;
-  margin: auto;
+  margin: 4px 0;
   margin-block: -2px;
   width: 50px;
 }
@@ -190,17 +183,17 @@ h2.fade-in-visible span, h3.fade-in-visible span {
   overflow: hidden;
 }
 
-.tag-studio {
-  position: absolute;
-  margin-top: 1000px;
-  margin-left: 680px;
-}
-
 .logo-menu {
   position: absolute;
   top: 20px;
   margin-left: 620px;
   animation: floating 3s ease-in-out infinite 1s;
+}
+
+.tag-studio {
+  position: absolute;
+  margin-top: 1000px;
+  margin-left: 680px;
 }
 
 .orchid-menu {

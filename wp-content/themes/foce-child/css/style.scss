@@ -119,28 +119,21 @@ transform: translateY(0);
   overflow: hidden;
 }
 
-
-.site-title {
-  position: fixed; // ou fixed si tu veux qu'il reste toujours visible
-  transition: none; // Désactive toute animation non souhaitée
-}
-
 .main-navigation {
-	background-color: #FFD5A2;
   display: flex;
   align-items: center;
   justify-content: center;
-	width: 100%;
-  z-index: 1000;
-	.line {
+  position: relative;
+  .line {
 		height: 3px;
 		background-color: #000;
 		display: block;
-		margin: auto;
+    margin: 4px 0;
 		margin-block: -2px;
 		width: 50px;
-	}
+  }
 }
+
 
 // Style du bouton hamburger
 .menu-toggle {    
@@ -167,7 +160,7 @@ transform: translateY(0);
   }
 }
 
-// Style du menu en plein écran
+// Style du menu en plein écran (ouvert)
 .menu {
   position: fixed;
   width: 1440px;
@@ -178,27 +171,27 @@ transform: translateY(0);
   opacity: 0;
   visibility: hidden;
   ul {
-      list-style: none;
-      padding: 0;
-      text-align: center;
-      padding-bottom: 100px;
-      margin-left: 400px;
-      li {
-        font-family: "Roboto Mono";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 64px;
-        line-height: 84px;
-        margin: 80px;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    padding-bottom: 100px;
+    margin-left: 400px;
+    li {
+      font-family: "Roboto Mono";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 84px;
+      margin: 80px;
+    }
+    a {
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s;
+      &:hover {
+        text-shadow: 0px 0px 14px #FF5C00;
       }
-      a {
-          color: #333;
-          text-decoration: none;
-          transition: color 0.3s;
-          &:hover {
-            text-shadow: 0px 0px 14px #FF5C00;
-          }
-      }
+    }
   }
 }
 
@@ -209,17 +202,17 @@ transform: translateY(0);
   overflow: hidden;
 }
 
-.tag-studio {
-  position: absolute;
-  margin-top: 1000px;
-  margin-left: 680px;
-}
-
 .logo-menu {
   position: absolute;
   top: 20px;
   margin-left: 620px;
   animation: floating 3s ease-in-out infinite 1s;
+}
+
+.tag-studio {
+  position: absolute;
+  margin-top: 1000px;
+  margin-left: 680px;
 }
 
 //////////////////////////////////////////////////////////////////////
