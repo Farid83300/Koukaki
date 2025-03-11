@@ -1,9 +1,9 @@
 
 
-/// SCSS du Thème enfant ///
+/////// - SCSS du Thème enfant - ///////
 
 //////////////////////////////////////////////////////////////////////
-// Fade in des sections au chargement de la page
+//     ANIMATIONS CSS DÉBUT     //////////////////////////////////////
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -112,6 +112,12 @@ h2.fade-in-visible span, h3.fade-in-visible span {
 opacity: 1;
 transform: translateY(0);
 }
+
+//      ANIMATIONS CSS FIN      //////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 //////////////////////////////////////////////////////////////////////
 // NavBAR
@@ -600,18 +606,14 @@ transform: translateY(0);
     margin-left: 300px;
   }
 
-  .menu ul li {
-
-  }
-
   .banner {
     min-height: 268.8px;
   }
 
   .banner-video {
-    height: 40vh; /* Hauteur réduite pour mobile, ajustez selon vos besoins */
-    object-fit: cover; /* Assure que la vidéo couvre bien l'espace alloué */
-    object-position: center; /* Centre la vidéo */
+    height: 40vh; 
+    object-fit: cover; 
+    object-position: center; 
   }
 
   .story #characters h3 {
@@ -757,9 +759,9 @@ transform: translateY(0);
   }
 
   .banner-video {
-    height: 30vh; /* Hauteur réduite pour mobile, ajustez selon vos besoins */
-    object-fit: cover; /* Assure que la vidéo couvre bien l'espace alloué */
-    object-position: center; /* Centre la vidéo */
+    height: 30vh; 
+    object-fit: cover; 
+    object-position: center; 
   }
 
   .story #characters h3 {
@@ -778,8 +780,6 @@ transform: translateY(0);
     width: 300px;
   }
 
-
-  
   #place > div {
     margin-left: 0;
     width: 400px;

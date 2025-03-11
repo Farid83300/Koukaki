@@ -547,11 +547,11 @@ h2.fade-in-visible span, h3.fade-in-visible span {
     min-height: 268.8px;
   }
   .banner-video {
-    height: 40vh; /* Hauteur réduite pour mobile, ajustez selon vos besoins */
+    height: 40vh;
     -o-object-fit: cover;
-       object-fit: cover; /* Assure que la vidéo couvre bien l'espace alloué */
+       object-fit: cover;
     -o-object-position: center;
-       object-position: center; /* Centre la vidéo */
+       object-position: center;
   }
   .story #characters h3 {
     margin-right: 0px;
@@ -665,11 +665,11 @@ h2.fade-in-visible span, h3.fade-in-visible span {
     min-height: 268.8px;
   }
   .banner-video {
-    height: 30vh; /* Hauteur réduite pour mobile, ajustez selon vos besoins */
+    height: 30vh;
     -o-object-fit: cover;
-       object-fit: cover; /* Assure que la vidéo couvre bien l'espace alloué */
+       object-fit: cover;
     -o-object-position: center;
-       object-position: center; /* Centre la vidéo */
+       object-position: center;
   }
   .story #characters h3 {
     margin-right: 0px;

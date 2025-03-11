@@ -40,8 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
     if (menuToggle) {
         // Force l'affichage du bouton
         menuToggle.style.display = 'flex';
-      }
+    }
     const menu = document.querySelector(".menu");
+    
+    // Fonction pour fermer le menu
+    function closeMenu() {
+        menuToggle.classList.remove("open");
+        menu.classList.remove("open");
+    }
+    
     menuToggle.addEventListener("click", function () {
         this.classList.toggle("open"); // Animation du bouton hamburger
         menu.classList.toggle("open"); // Animation du menu
@@ -50,9 +57,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Fermeture du menu au clic en dehors
     document.addEventListener("click", function (event) {
         if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-            menuToggle.classList.remove("open");
-            menu.classList.remove("open");
+            closeMenu();
         }
+    });
+    
+    // Fermeture du menu au clic sur un lien du menu
+    const menuLinks = document.querySelectorAll(".menu ul a");
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+            closeMenu();
+        });
     });
 });
 

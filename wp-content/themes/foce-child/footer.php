@@ -19,9 +19,6 @@
         </ul>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-<script src="http://koukaki.local/wp-content/themes/foce-child/scripts/main.js?ver=1.1"></script>
-<script src="http://koukaki.local/wp-content/themes/foce-child/scripts/slider.js"></script>
-
 <?php wp_footer(); ?>
 
 </body>
