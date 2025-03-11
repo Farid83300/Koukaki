@@ -2,6 +2,7 @@
 function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/css/style.css', array('parent-style'), filemtime(get_stylesheet_directory() . '/css/style.css'));
+    
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
@@ -15,15 +16,6 @@ if ( get_stylesheet() !== get_template() ) {
         return get_option( 'theme_mods_' . get_template(), $default );
     } );
 }
-
-// Ajout de jQuery
-function ajouter_jquery_wp() {
-    // Vérifier si jQuery est déjà chargé
-    if (!wp_script_is('jquery', 'enqueued')) {
-        wp_enqueue_script('jquery');
-    }
-}
-add_action('wp_enqueue_scripts', 'ajouter_jquery_wp');
 
 
 //Ajout de SwiperJS

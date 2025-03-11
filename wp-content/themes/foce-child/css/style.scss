@@ -42,13 +42,13 @@
 @keyframes floatingLogo {
   0% {
     transform: translateX(0) translateY(var(--logo-parallax-y));
-}
-50% {
-    transform: translateX(25px) translateY(var(--logo-parallax-y));
-}
-100% {
-    transform: translateX(0) translateY(var(--logo-parallax-y));
-}
+  }
+  50% {
+      transform: translateX(25px) translateY(var(--logo-parallax-y));
+  }
+  100% {
+      transform: translateX(0) translateY(var(--logo-parallax-y));
+  }
 }
 
 // Flottement des chats dans le menu toggle
@@ -70,7 +70,7 @@
   }
 }
 
-// Classe CSS pour les effets fade in
+// Classe CSS pour les effets de fade
 .fade-in-up {
   animation: fadeInUp 1s ease-out forwards;
 }
@@ -133,7 +133,6 @@ transform: translateY(0);
 		width: 50px;
   }
 }
-
 
 // Style du bouton hamburger
 .menu-toggle {    
@@ -200,19 +199,17 @@ transform: translateY(0);
   opacity: 1;
   visibility: visible;
   overflow: hidden;
-}
-
-.logo-menu {
-  position: absolute;
-  top: 20px;
-  margin-left: 620px;
-  animation: floating 3s ease-in-out infinite 1s;
-}
-
-.tag-studio {
-  position: absolute;
-  margin-top: 1000px;
-  margin-left: 680px;
+  .logo-menu {
+    position: absolute;
+    top: 20px;
+    margin-left: 620px;
+    animation: floating 3s ease-in-out infinite 1s;
+  }
+  .tag-studio {
+    position: absolute;
+    margin-top: 1000px;
+    margin-left: 680px;
+  }
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -455,8 +452,6 @@ transform: translateY(0);
   }
 }
 
-
-
 //////////////////////////////////////////////////////////////////////
 // Section nomination
 #nomination {
@@ -574,18 +569,268 @@ transform: translateY(0);
 
 
 
-////////// Media queries //////////
-/// Smartphones
-@media screen and (max-width: 767px) {
-  
+///////////// * Media queries * /////////////
+
+/// Ordinateurs portables
+@media (min-width: 1024px) {
+
 }
 
 /// Tablettes
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  #site-navigation > button {
+    right: 100px;
+  }
+  .menu ul {
+    padding-left: 50px;
+    margin-left: 50px;
+  }
+
+  #masthead > div > span {
+    margin-left: 385px;
+    margin-top: 900px;
+  }
+
+  .chat-violet-menu {
+    left: 650px;
+  }
+
+  #masthead > div > img.logo-menu {
+    margin-left: 300px;
+  }
+
+  .menu ul li {
+
+  }
+
+  .banner {
+    min-height: 268.8px;
+  }
+
+  .banner-video {
+    height: 40vh; /* Hauteur réduite pour mobile, ajustez selon vos besoins */
+    object-fit: cover; /* Assure que la vidéo couvre bien l'espace alloué */
+    object-position: center; /* Centre la vidéo */
+  }
+
+  .story #characters h3 {
+    margin-right: 0px;
+  }
+
+  .big-cloud {
+    right: 45px;
+  }
+
+  .little-cloud {
+    right: 350px;
+    top: 200px;
+  }
+
+  #studio h2::before {
+    left: -2em;
+  }
+
+  #studio h2::after {
+    right: -0.5em;
+  }
+
+  #nomination::before {
+    left: 2em;
+    top: 26em;
+  }
+
+  #nomination > div {
+    height: 250px;
+    width: 600px;
+    left: 110px;
+  }
+
+  #nomination > div > p {
+    margin-top: 50px;
+    padding-left: 70px;
+    font-size: 28px;
+    letter-spacing: 0;
+    font-weight: 200;
+  }
+
+  #nomination > img {
+    top: 420px;
+    right: 265px;
+  }
+
+  #nomination::before {
+    display: none;
+  }
   
 }
 
-/// Ordinateurs portables
-@media (min-width: 1024px) {
+/// Smartphones
+@media screen and (max-width: 767px) {
+  .main-navigation .site-title {
+		font-size: 16.5px;
+	}
+
+  .menu-toggle {
+    right: 10px;  
+    height: 25px;  
+  }
+
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    border: 1px solid;
+    border-radius: 3px;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1;
+    padding: 0;
+  }
+  
+
+  .main-navigation {
+    height: 60px;
+    .line {
+      height: 3px;
+      width: 20px;
+      margin: 0px;
+      margin-block: 2px;
+    }
+  }
+
+  .menu-toggle.open .line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .menu-toggle.open .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open .line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  .menu ul {
+    padding-left: -50px;
+    margin-left: -50px;
+  }
+
+
+  #masthead > div > ul > li {
+    font-size: 42px;
+  }
+
+  .menu ul li {
+    line-height: 20px;
+  }
+
+  #masthead > div > span {
+    margin-left: 150px;
+    margin-top: 720px;
+  }
+
+  .chat-violet-menu {
+    display: none;
+  }
+
+  .fleur-orange-menu {
+    right: 10px;
+    bottom: 150px;
+  }
+
+  .chat-orange-menu {
+    bottom: 100px;
+    left: 60px;
+  }
+   
+  .orchid-menu {
+    display: none;
+  }
+
+  .menu.open .logo-menu {
+    margin-left: 100px;
+    top: 0px;
+  }
+
+  .banner {
+    min-height: 268.8px;
+  }
+
+  .banner-video {
+    height: 30vh; /* Hauteur réduite pour mobile, ajustez selon vos besoins */
+    object-fit: cover; /* Assure que la vidéo couvre bien l'espace alloué */
+    object-position: center; /* Centre la vidéo */
+  }
+
+  .story #characters h3 {
+    margin-right: 0px;
+  }    
+  
+  .story #place > div > p {
+    padding-left: 0;
+  }
+
+  .story {
+    height: auto;
+  }
+
+  #\#story > article.story__article {
+    width: 300px;
+  }
+
+
+  
+  #place > div {
+    margin-left: 0;
+    width: 400px;
+  }
+
+  #place > div > img.big-cloud {
+    display: none;
+  }
+
+  #studio h2::before {
+    display: none;
+  }
+
+  #studio > h2 > span {
+    font-size: 32px;
+  }
+
+  #studio h2::after {
+    display: none;
+  }
+
+  #nomination > div {
+    height: 250px;
+    width: 400px;
+    left: 30px;
+  }
+
+  #nomination > div > p {
+    margin-top: 70px;
+    padding-left: 50px;
+    font-size: 20px;
+    letter-spacing: 0;
+    font-weight: 200;
+  }
+
+  #nomination > img {
+    top: 420px;
+    right: 65px;
+  }
+
+  #nomination::before {
+    display: none;
+  }
+
+  .story h2::before {
+    display: none;
+  }
+
+  .story__article::before {
+    display: none;
+  }
+  
 
 }

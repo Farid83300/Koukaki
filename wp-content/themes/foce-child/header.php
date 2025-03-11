@@ -50,6 +50,6 @@
             <img class="fleur-rose-menu" src="wp-content\themes\foce-child\images\images-menu\random_flower.png" alt="Petite fleur rose">
             <img class="chat-noir-menu" src="wp-content\themes\foce-child\images\images-menu\Group 180.png" alt="Chat noir">
             <img class="hibiscus-menu" src="wp-content\themes\foce-child\images\hibiscus_footer.png" alt="Grosse hibiscus">
-            </div>  
+        </div>  
 <!-- #site-navigation -->
 	</header><!-- #masthead -->
