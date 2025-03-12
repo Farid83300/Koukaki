@@ -8,9 +8,9 @@ get_header();
             <video class="banner-video fade-in-down" id="banner-video" alt="Bannière animée" autoplay loop muted>
                 <source src="/wp-content/themes/foce-child/videos/Studio+Koukaki-vidéo+header+sans+son+(1).mp4" type="video/mp4">
             </video>
-            <img class="logo" id="logo" src="/wp-content/themes/foce-child/images/logo.png'" alt="logo Fleurs d'oranger & chats errants">
+            <img class="logo fadeInUpLogo" id="logo" src="/wp-content/themes/foce-child/images/logo.png'" alt="logo Fleurs d'oranger & chats errants">
         </section>
-        <section id="#story" class="story fade-in-up">
+        <section id="story" class="story fade-in-up">
             <h2><span>L'histoire</span></h2>
             <article class="story__article">
                 <p class="fade-in-down"><?php echo get_theme_mod('story'); ?></p>
